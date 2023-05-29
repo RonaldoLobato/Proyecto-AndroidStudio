@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+
     <color name="white">#F6EDED</color>
     <color name="titulo_logo">#000000</color>
     <color name="blanco">#fff</color>
     <color name="amarillo_titulo">#676339</color>
     <color name="amarillo">#F6DE0E</color>
     <color name="azul">#4E1AAB</color>
+
+    <color name="negro">#000000</color>
+    <color name="azul_cielo">#87CEEB</color>
+    <color name="gris">#CCCCCC</color>
+    <color name="gris_claro">#F5F5F5</color>
+
 </resources>
