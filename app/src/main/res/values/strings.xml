@@ -15,4 +15,20 @@
     <string name="cancelar">Cancelar</string>
     <string name="nombre">Nombres :</string>
     <string name="apellido">Apellidos :</string>
+    <!--SUB MENUS TITULOS-->
+    <string name="menu_sub_opciones">Opciones</string>
+    <string name="menu_sub_cuenta">Cuenta</string>
+    <string name="menu_sub_cerrar">Cerrar</string>
+    <string name="page_title">Componentes</string>
+    <!--SUB MENUS - OPCIONES-->
+    <string name="menu_carrito">Productos Disponibles</string>
+    <string name="menu_lista">Mis Pedidos</string>
+    <!--SUB MENUS - CUENTA-->
+    <string name="menu_perfil">Mi Perfil</string>
+    <string name="menu_ayuda">Ayuda</string>
+    <!--SUB MENUS - CERRAR-->
+    <string name="menu_cerrar">Cerrar Sesion</string>
+
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
 </resources>
