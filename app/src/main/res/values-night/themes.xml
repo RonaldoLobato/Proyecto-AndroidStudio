@@ -22,4 +22,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="MenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textSize">111sp</item> <!-- Ajusta el tamaño de la fuente según tus necesidades -->
+    </style>
 </resources>
