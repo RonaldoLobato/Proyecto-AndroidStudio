@@ -14,4 +14,11 @@
     <color name="gris">#CCCCCC</color>
     <color name="gris_claro">#F5F5F5</color>
 
+    <color name="blue_200">#1C9DFF</color>
+    <color name="blue_500">#027CD9</color>
+    <color name="blue_700">#015A9E</color>
+    <color name="yellow_200">#FFCD82</color>
+    <color name="yellow_500">#FFA41C</color>
+    <color name="yellow_700">#D98302</color>
+
 </resources>

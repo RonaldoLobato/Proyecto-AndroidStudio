@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/menu_sub_opciones">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/item_disponible_productos"
+                    android:icon="@drawable/ic_car"
+                    android:title="@string/menu_carrito"/>
+                <item
+                    android:id="@+id/item_mis_pedidos"
+                    android:icon="@drawable/ic_list"
+                    android:title="@string/menu_lista"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/menu_sub_cuenta">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/item_mi_perfil"
+                    android:icon="@drawable/ic_user"
+                    android:title="@string/menu_perfil"/>
+                <item
+                    android:id="@+id/item_ayuda"
+                    android:icon="@drawable/ic_help"
+                    android:title="@string/menu_ayuda"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/menu_cerrar">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/item_cerrar"
+                    android:icon="@drawable/ic_close"
+                    android:title="@string/menu_cerrar"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

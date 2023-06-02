@@ -4,7 +4,31 @@
     <string name="iniciar_sesion">Iniciar Sesion</string>
     <string name="correo">Correo Electronico :</string>
     <string name="clave">Contraseña :</string>
+    <string name="confirmar">Confirmar contraseña</string>
     <string name="clave_input">Ingrese su contraseña</string>
     <string name="correo_input">Ingrese su email</string>
+    <string name="nombre_input">Ingrese sus nombres</string>
+    <string name="apellido_input">Ingrese sus apellidos</string>
     <string name="link">¿No tienes una cuenta? Registrate aqui</string>
+    <string name="registrar_usuario">Registra un nuevo usuario</string>
+    <string name="registrar">Registrar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="nombre">Nombres :</string>
+    <string name="apellido">Apellidos :</string>
+    <!--SUB MENUS TITULOS-->
+    <string name="menu_sub_opciones">Opciones</string>
+    <string name="menu_sub_cuenta">Cuenta</string>
+    <string name="menu_sub_cerrar">Cerrar</string>
+    <string name="page_title">Componentes</string>
+    <!--SUB MENUS - OPCIONES-->
+    <string name="menu_carrito">Productos Disponibles</string>
+    <string name="menu_lista">Mis Pedidos</string>
+    <!--SUB MENUS - CUENTA-->
+    <string name="menu_perfil">Mi Perfil</string>
+    <string name="menu_ayuda">Ayuda</string>
+    <!--SUB MENUS - CERRAR-->
+    <string name="menu_cerrar">Cerrar Sesion</string>
+
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
 </resources>

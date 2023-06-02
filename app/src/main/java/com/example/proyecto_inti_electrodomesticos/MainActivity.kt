@@ -17,10 +17,16 @@ class MainActivity : AppCompatActivity() {
 
 
         btnLink = findViewById(R.id.textViewLink)
+        btnIngresar = findViewById(R.id.btnIniciarSesion)
 
         btnLink.setOnClickListener {
-            val Intent = Intent(this, RegistroUsuario::class.java)
-            startActivity(Intent)
+            val intent = Intent(this, RegistroUsuario::class.java)
+            startActivity(intent)
+        }
+
+        btnIngresar.setOnClickListener {
+            val intent = Intent(this, AppBarActivity::class.java)
+            startActivity(intent)
         }
 
     }

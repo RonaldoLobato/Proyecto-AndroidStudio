@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ProyectoIntiElectrodomesticos"
         tools:targetApi="31">
         <activity
+            android:name=".AppBarActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistroUsuario"
             android:exported="false" />
         <activity
