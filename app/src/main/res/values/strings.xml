@@ -36,4 +36,14 @@
     <string name="ape_input">ACTUALIZAR APELLIDO</string>
     <string name="email_input">ACTUALIZAR CORREO</string>
     <string name="psw_input">ACTUALIZAR CONTRA</string>
+    <string-array name="electro_options">
+        <item>Licuadora</item>
+        <item>Refrigerado</item>
+        <item>Lavadora</item>
+        <item>TV Smart</item>
+        <item>Batidora</item>
+        <item>Aspiradora</item>
+        <item>Olla Arrocera</item>
+        <item>Equipo de Sonido</item>
+    </string-array>
 </resources>
