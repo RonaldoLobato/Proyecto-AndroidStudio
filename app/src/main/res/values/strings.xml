@@ -38,8 +38,8 @@
     <string name="psw_input">ACTUALIZAR CONTRA</string>
     <string-array name="electro_options">
         <item>Licuadora</item>
-        <item>Refrigerado</item>
         <item>Lavadora</item>
+        <item>Refrigeradora</item>
         <item>TV Smart</item>
         <item>Batidora</item>
         <item>Aspiradora</item>

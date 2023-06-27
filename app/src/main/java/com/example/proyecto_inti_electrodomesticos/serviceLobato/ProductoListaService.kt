@@ -1,13 +1,36 @@
 package com.example.proyecto_inti_electrodomesticos.serviceLobato
 
+import android.content.ContentValues
 import android.content.Context
 import android.provider.BaseColumns
 import com.example.proyecto_inti_electrodomesticos.configLobato.BaseDatosSQLite
 import com.example.proyecto_inti_electrodomesticos.configLobato.TABLA_PRODUCTO
+import com.example.proyecto_inti_electrodomesticos.configLobato.TABLE_USUARIO_NAME
 import com.example.proyecto_inti_electrodomesticos.coreLobato.ProductoLista
+import com.example.proyecto_inti_electrodomesticos.coreLobato.Usuario
 
 class ProductoListaService(context: Context) {
     val dbHelper = BaseDatosSQLite(context)
+
+    fun insertarNuevoProducto(productoLista: ProductoLista): ProductoLista? {
+        val db = dbHelper.writableDatabase
+        val values = ContentValues().apply {
+            put("cgcNombre", productoLista.cgcNombre)
+            put("cgcImagen",productoLista.cgcImagen)
+            put("cgcDescripcion",productoLista.cgcDescripcion)
+            put("cgcPrecio",productoLista.cgcPrecio)
+        }
+        val newRowId = db?.insert(
+            TABLA_PRODUCTO,
+            null,
+            values
+        )
+        cerrarDB()
+        return if (newRowId != null) getProducto(newRowId.toLong()) else null
+    }
+
+
+
 
     fun getProducto(idProducto:Long): ProductoLista?{
         val db=dbHelper.readableDatabase

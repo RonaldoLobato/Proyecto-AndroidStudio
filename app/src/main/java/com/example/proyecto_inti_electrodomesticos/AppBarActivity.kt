@@ -43,11 +43,19 @@ class AppBarActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             R.id.item_mi_perfil -> openUserActivity()
             R.id.item_disponible_productos -> openProductosActivity()
             R.id.item_mis_pedidos -> openMisPedidosActivity()
+            R.id.item_registro_producto->openMenuProductosActivity()
             else -> Toast.makeText(this,"Seleccione una opcion valida",Toast.LENGTH_LONG).show()
         }
         drawer.closeDrawer(GravityCompat.START)
 
         return true
+    }
+
+
+    private fun openMenuProductosActivity(){
+
+        val intent= Intent(this,MenuProductoActivity::class.java)
+        startActivity(intent)
     }
     private fun openProductosActivity(){
 
