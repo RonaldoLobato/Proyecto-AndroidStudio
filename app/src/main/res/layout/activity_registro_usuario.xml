@@ -7,54 +7,55 @@
     tools:context=".RegistroUsuario"
     android:background="@color/white">
 
+
     <TextView
         android:id="@+id/textVievInti"
-        android:layout_width="306dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="248dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
         android:text="@string/titulo_logo"
         android:textColor="@color/titulo_logo"
-        android:textSize="29sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="85dp"
         android:layout_height="68dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:src="@drawable/ic_logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textVievInti" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewTituloRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="@string/registrar_usuario"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
+        app:layout_constraintTop_toBottomOf="@+id/floatbtncamara" />
 
     <TextView
         android:id="@+id/viewNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
         android:text="@string/nombre"
-        android:textSize="20sp"
-        app:drawableRightCompat="@drawable/ic_name"
+        android:textSize="18sp"
+        app:drawableRightCompat="@drawable/ic_user_reg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTituloRegistro" />
 
@@ -62,7 +63,6 @@
         android:id="@+id/txtApellido"
         android:layout_width="370dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:background="@color/blanco"
         android:ems="10"
         android:hint="@string/apellido_input"
@@ -71,9 +71,9 @@
         android:paddingLeft="10dp"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.338"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewApellido" />
 
@@ -81,14 +81,14 @@
         android:id="@+id/viewApellido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
         android:text="@string/apellido"
-        android:textSize="20sp"
-        app:drawableRightCompat="@drawable/ic_name"
+        android:textSize="18sp"
+        app:drawableRightCompat="@drawable/ic_user_reg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
 
@@ -96,7 +96,7 @@
         android:id="@+id/txtNombre"
         android:layout_width="370dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:background="@color/blanco"
         android:ems="10"
         android:hint="@string/nombre_input"
@@ -105,8 +105,9 @@
         android:paddingLeft="10dp"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.338"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewNombre" />
 
@@ -118,7 +119,7 @@
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
         android:text="@string/correo"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:drawableRightCompat="@drawable/ic_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.105"
@@ -126,7 +127,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtApellido" />
 
     <EditText
-        android:id="@+id/txtEmail"
+        android:id="@+id/txtEmailRegistro"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
@@ -138,9 +139,9 @@
         android:paddingLeft="10dp"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewCorreoReg" />
 
@@ -148,22 +149,21 @@
         android:id="@+id/viewPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:drawablePadding="12dp"
         android:gravity="center_vertical"
         android:text="@string/clave"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:drawableRightCompat="@drawable/ic_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailRegistro" />
 
     <EditText
         android:id="@+id/txtConfirmarContraseña"
         android:layout_width="370dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
         android:background="@color/blanco"
         android:ems="10"
         android:hint="@string/clave_input"
@@ -172,9 +172,9 @@
         android:paddingLeft="10dp"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewPasswordConfirmar" />
 
@@ -182,19 +182,18 @@
         android:id="@+id/viewPasswordConfirmar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:drawablePadding="8dp"
         android:gravity="center_vertical"
         android:text="@string/confirmar"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:drawableRightCompat="@drawable/ic_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtContraseña" />
+        app:layout_constraintTop_toBottomOf="@+id/txtContraseñaRegistro" />
 
     <EditText
-        android:id="@+id/txtContraseña"
+        android:id="@+id/txtContraseñaRegistro"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
@@ -206,11 +205,33 @@
         android:paddingLeft="10dp"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewPassword2" />
+
+    <ImageView
+        android:id="@+id/imageViewContraseña2"
+        android:layout_width="35dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/ic_view"
+        app:layout_constraintEnd_toEndOf="@+id/txtConfirmarContraseña"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="@+id/txtConfirmarContraseña"
+        app:layout_constraintTop_toTopOf="@+id/txtConfirmarContraseña" />
+
+    <ImageView
+        android:id="@+id/imageViewContraseña1"
+        android:layout_width="35dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/ic_view"
+        app:layout_constraintEnd_toEndOf="@+id/txtContraseñaRegistro"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="@+id/txtContraseñaRegistro"
+        app:layout_constraintTop_toTopOf="@+id/txtContraseñaRegistro" />
 
     <Button
         android:id="@+id/btnRegistrarReg"
@@ -239,6 +260,18 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtConfirmarContraseña" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatbtncamara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textVievInti"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

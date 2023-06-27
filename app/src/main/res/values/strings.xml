@@ -31,4 +31,9 @@
 
     <string name="open_drawer">Open</string>
     <string name="close_drawer">Close</string>
+
+    <string name="user_input">ACTUALIZAR NOMBRE</string>
+    <string name="ape_input">ACTUALIZAR APELLIDO</string>
+    <string name="email_input">ACTUALIZAR CORREO</string>
+    <string name="psw_input">ACTUALIZAR CONTRA</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.proyecto_inti_electrodomesticos
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -39,11 +40,36 @@ class AppBarActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
+            R.id.item_mi_perfil -> openUserActivity()
+            R.id.item_disponible_productos -> openProductosActivity()
+            R.id.item_mis_pedidos -> openMisPedidosActivity()
             else -> Toast.makeText(this,"Seleccione una opcion valida",Toast.LENGTH_LONG).show()
         }
         drawer.closeDrawer(GravityCompat.START)
 
         return true
+    }
+    private fun openProductosActivity(){
+
+        val intent= Intent(this,MisProductosActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openUserActivity() {
+        val usuarioId = intent.getIntExtra("usuarioId", -1)
+        if (usuarioId != -1) {
+            val intent = Intent(this, ActivityUser::class.java).apply {
+                putExtra("usuarioId", usuarioId)
+            }
+            startActivity(intent)
+        } else {
+            Toast.makeText(this, "ID de usuario no válido", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun openMisPedidosActivity(){
+        val intent = Intent(this,MisPedidos::class.java)
+        startActivity(intent)
     }
 }
 
