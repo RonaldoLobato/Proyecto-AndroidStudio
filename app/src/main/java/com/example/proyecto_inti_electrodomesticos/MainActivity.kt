@@ -16,6 +16,7 @@ import android.widget.Toast
 import com.example.proyecto_inti_electrodomesticos.configLobato.BaseDatosSQLite
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
+import com.bumptech.glide.Glide
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,9 +31,12 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var imageViewContraseña: ImageView
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
 
         btnLink = findViewById(R.id.textViewLink)
@@ -63,6 +67,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnIngresar.setOnClickListener {
+
+
 
             val correo = txtEmail.text.toString()
             val clave = txtContraseña.text.toString()

@@ -1,6 +1,7 @@
 package com.example.proyecto_inti_electrodomesticos
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -23,6 +24,7 @@ class MenuProductoActivity : AppCompatActivity() {
         lateinit var  editPrecio :EditText
         lateinit var spinProducto: Spinner
         lateinit var btnAgregar:Button
+        lateinit var btnListado:Button
         lateinit var nombreImagen:String
 
     var productoListaService = ProductoListaService(this)
@@ -31,12 +33,20 @@ class MenuProductoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_producto)
 
+
         editNombre =  findViewById(R.id.txtNombreProducto)
         editDescripcion= findViewById(R.id.txtDescripcionProducto)
         editPrecio =  findViewById(R.id.txtPrecioProducto)
         spinProducto =findViewById(R.id.productoSpinner)
         btnAgregar=findViewById(R.id.btnAgreagrProducto)
         nombreImagen="vacio"
+        btnListado=findViewById(R.id.btnListarProducto)
+
+
+        btnListado.setOnClickListener {
+            openListadoProducto()
+        }
+
 
         val electro_options = resources.getStringArray(R.array.electro_options)
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, electro_options)
@@ -68,11 +78,12 @@ class MenuProductoActivity : AppCompatActivity() {
         btnAgregar.setOnClickListener { view ->
             val nombre = editNombre.text.toString()
             val descripcion = editDescripcion.text.toString()
-            val precio = editPrecio.text.toString().toDouble()
+            val precio = editPrecio.text.toString()
 
-            val productolista = ProductoLista(nombreImagen,nombre,descripcion,precio)
 
             if (validacionesCampos(nombreImagen, nombre, descripcion,precio)) {
+                val  precio1=precio.toDouble()
+                val productolista = ProductoLista(nombreImagen,nombre,descripcion,precio1)
                 val builder: AlertDialog.Builder? = view?.let {
                     AlertDialog.Builder(this)
                 }
@@ -92,12 +103,14 @@ class MenuProductoActivity : AppCompatActivity() {
                 val dialog: AlertDialog? = builder?.create()
                 dialog?.show()
             }
-
+            else {
+                Toast.makeText(this, "El Registro no se puede Realizar", Toast.LENGTH_LONG).show()
+            }
         }
 
     }
 
-    private fun validacionesCampos(imagen: String,nombre: String, descripcion: String, precio: Double): Boolean {
+    private fun validacionesCampos(imagen: String,nombre: String, descripcion: String, precio: String): Boolean {
         if (nombre.isEmpty()) {
             Toast.makeText(this, "Ingresa nombre de Producto", Toast.LENGTH_LONG).show()
             return false
@@ -107,12 +120,22 @@ class MenuProductoActivity : AppCompatActivity() {
             return false
         }
 
-        if (precio == null && precio == 0.0 && precio<0.0) {
+        if (precio.isEmpty() ) {
             Toast.makeText(this, "El precio es incorrecto", Toast.LENGTH_LONG).show()
             return false
         }
+        if (imagen.isEmpty()) {
+            Toast.makeText(this, "Seleccione una imagen", Toast.LENGTH_LONG).show()
+            return false
+        }
+
 
         return true
+    }
+
+    private fun openListadoProducto(){
+        val intent = Intent(this, MisProductosActivity::class.java)
+        startActivity(intent)
     }
     fun registrar(v: ProductoLista) {
         productoListaService.insertarNuevoProducto(v)
