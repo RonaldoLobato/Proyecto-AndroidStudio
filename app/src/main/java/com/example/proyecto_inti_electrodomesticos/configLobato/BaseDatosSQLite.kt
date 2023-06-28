@@ -33,7 +33,6 @@ class BaseDatosSQLite(content: Context) :
         db.execSQL("INSERT INTO $TABLE_USUARIO_NAME(${BaseColumns._ID},user_nombre, user_apellido, user_correo, user_contraseña) VALUES" + "(3,'Yovanita','Dominguez','i20211965@cibertec.edu.pe','cibertec')")
         db.execSQL("INSERT INTO $TABLE_USUARIO_NAME(${BaseColumns._ID},user_nombre, user_apellido, user_correo, user_contraseña) VALUES" + "(4,'Luz','Alcala','i20211369@cibertec.edu.pe','cibertec')")
         db.execSQL("INSERT INTO $TABLE_USUARIO_NAME(${BaseColumns._ID},user_nombre, user_apellido, user_correo, user_contraseña) VALUES" + "(5,'Patrick','Ruiz','i20211287@cibertec.edu.pe','cibertec')")
-
         //Registro de Producto
         db.execSQL(SQL_CREATE_ENTRIES_PRODUCTO)
         db.execSQL("INSERT INTO $TABLA_PRODUCTO(cgcImagen,cgcNombre,cgcDescripcion,cgcPrecio) VALUES('p001','Licuadora','Oster marca reconocida a nivel mundial',78.80)")
